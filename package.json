@@ -1,0 +1,45 @@
+{
+  "name": "ry-front-end-201701",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build:js": "webpack",
+    "build:css": "postcss -c postcssrc.json -m",
+    "build:html": "cpx 'src/**/*.html' public",
+    "build": "yarn run clean; yarn run build:html && yarn run build:js && yarn run build:css",
+    "watch": "ls",
+    "serve": "http-server -p 9000 public",
+    "clean": "rm -rf public && mkdir -p public/styles public/scripts public/images"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.6.1",
+    "babel-core": "^6.21.0",
+    "babel-eslint": "^7.1.1",
+    "babel-loader": "^6.2.10",
+    "babel-polyfill": "^6.20.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
+    "cpx": "^1.5.0",
+    "http-server": "^0.9.0",
+    "postcss": "^5.2.9",
+    "postcss-apply": "^0.4.0",
+    "postcss-calc": "^5.3.1",
+    "postcss-cli": "^2.6.0",
+    "postcss-color-function": "^2.0.1",
+    "postcss-comment": "^1.0.3",
+    "postcss-extend": "^1.0.5",
+    "postcss-import": "^9.1.0",
+    "postcss-mixins": "^5.4.1",
+    "postcss-nested": "^1.0.0",
+    "postcss-simple-vars": "^3.0.0",
+    "postcss-sorting": "^1.7.0",
+    "watch": "^1.0.1",
+    "webpack": "2.2.0-rc.3"
+  },
+  "dependencies": {
+    "normalize.css": "^5.0.0",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "use": [
+    "autoprefixer",
+    "postcss-import",
+    "postcss-extend",
+    "postcss-mixins",
+    "postcss-nested",
+    "postcss-color-function",
+    "postcss-apply",
+    "postcss-sorting",
+    "postcss-simple-vars"
+  ],
+  "input": "src/styles/main.scss",
+  "output": "public/styles/main.css",
+  "autoprefixer": {
+    "browsers": "last 2 versions"
+  }
+}
