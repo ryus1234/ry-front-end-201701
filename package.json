@@ -13,7 +13,7 @@
     "watch:css": "postcss -c postcssrc.json -m -w",
     "watch:html": "cpx 'src/**/*.html' public --watch",
     "watch": "yarn run watch:js & yarn run watch:css & yarn run watch:html",
-    "serve": "http-server -p 9000 public & yarn run watch",
+    "serve": "http-server -p 9000 public & open http://127.0.0.1:9000 & yarn run watch",
     "clean": "rm -rf public && mkdir -p public/styles public/scripts public/images"
   },
   "devDependencies": {
