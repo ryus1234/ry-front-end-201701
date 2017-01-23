@@ -1,12 +1,20 @@
+const webpack = require('webpack');
 
 module.exports = [
   {
-    entry: './src/scripts/main.js',
+    entry: {
+      main: './src/scripts/main.js',
+      vendor: ['react', 'react-dom']
+    },
     output: {
       path: 'public/scripts',
-      filename: 'main.js'
+      filename: '[name].js'
     },
-    plugins: [],
+    plugins: [
+      new webpack.optimize.CommonsChunkPlugin({
+        name: ['vendor', 'manifest']
+      })
+    ],
     module: {
       rules: [
         {
